@@ -9,6 +9,10 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+    def keystorePropertiesFile = rootProject.file("/Users/evan/Projects/My/AndroidTest/CICD/KeyStoreProperties/keystore.properties")
+    def keystoreProperties = new Properties()
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
     defaultConfig {
         applicationId "evan.chen.tutorial.appdistributionsample"
         minSdkVersion 21
@@ -17,6 +21,15 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
     }
 
     buildTypes {
@@ -30,15 +43,18 @@ android {
 //            }
 
             firebaseAppDistribution {
-                releaseNotes=" 更新了 xxx 功能 "
-                groups="qa-team"
+                releaseNotes = " 更新了 xxx 功能 "
+                groups = "qa-team"
             }
+
+            signingConfig signingConfigs.release
+
         }
 
-        debug{
+        debug {
             firebaseAppDistribution {
-                releaseNotes=" 更新了 xxx 功能 "
-                groups="qa-team"
+                releaseNotes = " 更新了 xxx 功能 "
+                groups = "qa-team"
             }
         }
     }
@@ -49,6 +65,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 }
 
 dependencies {
