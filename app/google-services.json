@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "639180491134",
-    "project_id": "appdistribution-b1325",
-    "storage_bucket": "appdistribution-b1325.appspot.com"
+    "project_number": "36904410788",
+    "project_id": "appdistribution-715c5",
+    "storage_bucket": "appdistribution-715c5.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:639180491134:android:44384dcaf963b173444b2f",
+        "mobilesdk_app_id": "1:36904410788:android:cb474cf64f355abac51031",
         "android_client_info": {
           "package_name": "evan.chen.tutorial.appdistributionsample"
         }
       },
       "oauth_client": [
         {
-          "client_id": "639180491134-kc5p6jrve84m2spclu2kt8dc96k0j5ut.apps.googleusercontent.com",
+          "client_id": "36904410788-3k51maj7ltgb9umjgfarrkgnd972db9m.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAgdA8WDlh3egCMVMnGvZ-lRTEcWE6DRtg"
+          "current_key": "AIzaSyBGBDcK7VlhYE-QiKVlrQQm1i104vaMP1w"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "639180491134-kc5p6jrve84m2spclu2kt8dc96k0j5ut.apps.googleusercontent.com",
+              "client_id": "36904410788-3k51maj7ltgb9umjgfarrkgnd972db9m.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
